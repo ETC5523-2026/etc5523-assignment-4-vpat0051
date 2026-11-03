@@ -1,0 +1,67 @@
+---
+title: "Getting started with covidexplorer"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with covidexplorer}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+## What this package is for
+
+`covidexplorer` helps public health students compare how countries fared during the Delta wave (June to November 2021). The question it answers is: **how did new COVID-19 cases move alongside vaccination coverage in different countries?**
+
+The data come from the Our World in Data COVID-19 dataset (CC BY), which stopped updating in August 2024.
+
+## Install
+
+```{r, eval = FALSE}
+# install.packages("remotes")
+remotes::install_github("ETC5523-2026/etc5523-assignment-4-vpat0051")
+```
+
+## Launch the app
+
+```{r, eval = FALSE}
+library(covidexplorer)
+launch_app()
+```
+
+The app has two tabs. **About and how to use** explains the fields. **Explore** is where you work:
+
+1. Choose 1 to 6 countries.
+2. Set the date range.
+3. Compare the cases chart with the vaccination chart, then check the peak table.
+
+If you clear the country box, the app shows a message asking you to pick at least one country.
+
+## Use the summary function without the app
+
+`summarise_delta()` gives the same peak table the app shows.
+
+```{r}
+library(covidexplorer)
+summarise_delta(c("Australia", "India", "United Kingdom"))
+```
+
+## How to read the outputs
+
+Take the table above. The United Kingdom peaked at about 690 new cases per million on 24 October, when roughly 67 in 100 people were fully vaccinated. Australia's peak came on 3 October at about 84 cases per million, with about 45 in 100 fully vaccinated, and its coverage climbed to about 72 by the end of November.
+
+So a country can be highly vaccinated and still have a large case wave, and a country can have a small wave while coverage is still catching up. The charts show timing and size, not cause.
+
+India's peak date is 1 June, the first day of the window. That flags a peak that happened before our data starts, so the table's number is just the highest value we can see.
+
+## Limitations
+
+- Cases depend on how much each country tested and reported.
+- Vaccination values are carried forward between reporting days, and some countries have gaps early in the window.
+- The window ends on 30 November 2021, before Omicron took over.
+
+```{r}
+head(covid_delta)
+```

@@ -34,4 +34,4 @@ summarise_delta(c("Australia", "India"))
 
 ## Generative AI declaration
 
-Generative AI declaration: I used Claude for occasional help with R code, package setup, troubleshooting and documentation. I reviewed, tested and edited all suggestions myself.
+Generative AI declaration: I used Claude to help plan the package and debug the R code, fix a git problem, and draft the documentation and vignette text. I checked, ran and revised everything.

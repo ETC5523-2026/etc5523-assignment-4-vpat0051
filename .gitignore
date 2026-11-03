@@ -1,2 +1,6 @@
 .Rproj.user
 data-raw/owid-covid-data.csv
+inst/doc
+/doc/
+/Meta/
+docs

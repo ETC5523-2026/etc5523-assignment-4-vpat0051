@@ -20,5 +20,8 @@ Imports:
     shiny
 Suggests:
     bslib,
-    ggplot2
+    ggplot2,
+    knitr,
+    rmarkdown
 LazyData: true
+VignetteBuilder: knitr
