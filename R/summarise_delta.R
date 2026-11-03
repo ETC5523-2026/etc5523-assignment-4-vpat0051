@@ -24,7 +24,7 @@
 summarise_delta <- function(countries,
                             start = as.Date("2021-06-01"),
                             end = as.Date("2021-11-30"),
-                            data = covid_delta) {
+                            data = covidexplorer::covid_delta) {
   if (length(countries) == 0) {
     stop("Please supply at least one country.", call. = FALSE)
   }
