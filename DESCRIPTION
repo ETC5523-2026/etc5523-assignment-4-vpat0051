@@ -1,11 +1,20 @@
 Package: covidexplorer
-Title: What the Package Does (One Line, Title Case)
+Title: Explore COVID-19 Cases and Vaccination During the Delta Period
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
-Config/roxygen2/version: 8.1.1
+    person("Vrunda", "Patil", , "vpat0051@student.monash.edu", role = c("aut", "cre"))
+Description: Bundles a cleaned subset of the Our World in Data COVID-19
+    dataset and a Shiny app that lets public health students compare new
+    cases and vaccination coverage across countries during the Delta
+    period. Also includes a function to summarise cases and vaccination
+    by country and date range.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.1
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports: 
+    dplyr,
+    rlang
